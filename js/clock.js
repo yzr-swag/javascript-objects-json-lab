@@ -29,7 +29,7 @@ const updateTime = () => {
     
 
     hrHand.style.transform = `rotate(${rotHr}deg)`;
-
+    
 
 }
 
