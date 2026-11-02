@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascrip: Working with Time</title>
+    <title>Javascript: Working with Time</title>
     <link rel="stylesheet" type="text/css" href="css/mobileFirst.css" />
     <link rel="stylesheet" type="text/css" href="css/clock.css" />
+    <script src="js/clock.js" defer></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -37,7 +38,12 @@
         <div class="contentLeft">
           <h2>Analogue</h2>
           <div>
-<!-- Analogue clock here -->
+            <div id="clockFace">
+              <div id="secondHand"></div>
+              <div id="minHand"></div>
+              <div id="hrHand"></div>
+              <div id="pin"></div>
+            </div>
           </div>
         </div>
       </div>
