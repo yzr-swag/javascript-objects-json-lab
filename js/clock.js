@@ -21,7 +21,12 @@ const updateTime = () => {
 
 
     const hours = myDate.getHours();
-    const rotHr = hours * 30 - 90 + (rotMinutes/9);
+    if(rotMinutes >= 0){
+        var rotHr = (hours * 30) - 90 + (rotMinutes/9);
+    } else{
+        var rotHr = (hours * 30) - 90 + ((90+rotMinutes)/9);
+    }
+    
 
     hrHand.style.transform = `rotate(${rotHr}deg)`;
 
