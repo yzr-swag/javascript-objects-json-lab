@@ -1,32 +1,33 @@
 (() =>{
 const myHeading = document.getElementById("myHeading");
-var headingText = myHeading.innerHTML;
+const headingChildren = myHeading.children;
 
-for (let i =0; i <headingText.length; i++){
-    
-    setTimeout(() =>{
-        headingText.charAt[i].animate(letterBounce, bounceTiming);
-        console.dir(headingText);
-    }, 500)
- 
+for (let i =0; i <headingChildren.length; i++){
+    animateElement(headingChildren[i]);
 }
 
 })();
 
-
-
-const letterBounce =[
-    { transform: "translateY(-20px)"},
-    { transform: "translateY(0px)"},
-];
-
-const bounceTiming ={
-    duration: 500,
-    iterations: 1,
-};
-
 const myHeading = document.getElementById("myHeading");
+const headingChildren = myHeading.children;
+console.dir(headingChildren.length);
+
+for (let i =0; i <headingChildren.length; i++){
+    console.dir("upo");
+}
+
 
 myHeading.addEventListener("click", () => {
-    myHeading.animate(letterBounce, bounceTiming);
+    for (let i =0; i <headingChildren.length; i++){
+    
+    setTimeout(() =>{
+        animateElement(headingChildren[i]);
+    }, 500)
+ 
+}
 })
+
+
+function animateElement(element){
+    element.style.transform = `translateY(-5px)`;
+}
